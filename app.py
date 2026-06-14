@@ -1,4 +1,5 @@
 import pickle
+import gzip
 from urllib.parse import quote
 
 import requests
@@ -26,7 +27,8 @@ BACKGROUND_IMAGE_URL = (
 @st.cache_data(show_spinner=False)
 def load_data():
     movies = pickle.load(open("movies_list.pkl", "rb"))
-    similarity = pickle.load(open("similarity.pkl", "rb"))
+    with gzip.open("similarity.pkl.gz", "rb") as similarity_file:
+        similarity = pickle.load(similarity_file)
     return movies, similarity
 
 
