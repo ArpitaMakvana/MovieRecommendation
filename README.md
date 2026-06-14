@@ -1,4 +1,3 @@
-
 # Movie Recommender System 🎬
 
 > Movie Recommender System is a content-based filtering app that suggests similar movies based on text features extracted from movie metadata. It uses a Streamlit interface and TMDB posters to give users a simple, visual recommendation experience.
@@ -36,7 +35,7 @@ movie_recommender_system-main/
 ├── app.py
 ├── dataset.csv
 ├── movies_list.pkl
-├── similarity.pkl
+├── similarity.pkl.gz
 ├── main.py
 ├── test.py
 ├── Main.ipynb
@@ -94,7 +93,7 @@ This project uses **content-based filtering**.
 |---|---|
 | `dataset.csv` | Raw movie dataset |
 | `movies_list.pkl` | Preprocessed movie table used by the app |
-| `similarity.pkl` | Saved similarity matrix |
+| `similarity.pkl.gz` | Compressed saved similarity matrix |
 
 ---
 
@@ -123,6 +122,3 @@ This project uses **content-based filtering**.
 - The project depends on TMDB for poster images.
 - If you change file locations, update the file paths in `app.py`.
 - The recommendation quality depends on the cleaned metadata stored in the dataset and pickle files.
-
-
-
